@@ -3,9 +3,11 @@ def triplets():
         a = i
         for j in range(a+1, 999-a):
             b = j
-            c = 1000 - (a + b)
+            c = 1000 - a - b
             if (a**2) + (b**2) == (c**2):
                 return a, b, c
+            if b >= c:
+                break
 
 triplet = triplets()
 print(triplet)
